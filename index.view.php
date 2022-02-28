@@ -30,7 +30,7 @@
 
 <?php
 //
-//checkAge($age = 33 );
+//checkAge(33);
 //
 //?>
 
