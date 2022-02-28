@@ -23,10 +23,11 @@ class Team {
 
     protected $members = [];
 
-    public function _construct($name)
+    public function __construct($name, $members = [])
 
 {
     $this->name = $name;
+    $this->members = $members;
 }
 
 public function name()
@@ -46,9 +47,13 @@ public function add($name)
 }
 
 
-$acne = new Team('Acne');
+$acne = new Team('Acne' , [
 
-$acne->add('John Doe');
-$acne->add('Jane Doe');
+    'John Doe',
+    'Jane Doe'
+]
+);
+
+$acne->add('Jen Doe');
 
 var_dump($acne->members());
