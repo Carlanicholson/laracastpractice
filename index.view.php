@@ -29,10 +29,13 @@
 <!--</ul>-->
 
 <?php
+//
+//checkAge($age = 33 );
+//
+//?>
 
-checkAge($age = 33 );
 
-?>
+
 </body>
 
 </html>
