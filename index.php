@@ -18,42 +18,71 @@ require 'index.view.php';
 //dd ('hello world');
 
 
-class Team {
-    protected $name;
+//class Team {
+//    protected $name;
+//
+//    protected $members = [];
+//
+//    public function __construct($name, $members = [])
+//
+//{
+//    $this->name = $name;
+//    $this->members = $members;
+//}
+//
+//public function name()
+//{
+// return $this->name;
+//}
+//
+//public function members()
+//{
+//    return $this->members;
+//}
+//
+//public function add($name)
+//{
+//    $this->members[] = $name;
+//}
+//}
+//
+//
+//$acne = new Team('Acne' , [
+//
+//    'John Doe',
+//    'Jane Doe'
+//]
+//);
+//
+//$acne->add('Jen Doe');
+//
+//var_dump($acne->members());
 
-    protected $members = [];
 
-    public function __construct($name, $members = [])
+class CoffeeMaker
+{
+    public function brew()
+    {
+        var_dump('Brewing the coffee');
+    }
+
+}
+//"is a"
+class SpecialityCoffeeMaker extends CoffeeMaker
+{
+    public function brewLatte()
+    {
+        var_dump('Brewing a latte');
+    }
+}
+
+class ExtraCoffeeMaker extends SpecialityCoffeeMaker
 
 {
-    $this->name = $name;
-    $this->members = $members;
+    public function brewFlatWhite()
+    {
+        var_dump('Brewing a Flat White');
+    }
 }
 
-public function name()
-{
- return $this->name;
-}
-
-public function members()
-{
-    return $this->members;
-}
-
-public function add($name)
-{
-    $this->members[] = $name;
-}
-}
-
-
-$acne = new Team('Acne' , [
-
-    'John Doe',
-    'Jane Doe'
-]
-);
-
-$acne->add('Jen Doe');
-
-var_dump($acne->members());
+(new ExtraCoffeeMaker())->brewFlatWhite();
